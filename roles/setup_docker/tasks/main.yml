@@ -1,0 +1,14 @@
+- name: Remove conflicting containerd packages
+  apt:
+    name: "{{ item }}"
+    state: absent
+  loop:
+    - containerd
+    - containerd.io
+
+- name: Install Docker
+  apt:
+    name: docker.io
+    state: present
+    update_cache: yes
+

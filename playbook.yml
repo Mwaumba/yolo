@@ -1,0 +1,10 @@
+---
+- name: Configure and deploy application
+  hosts: vms
+  become: yes
+  vars:
+    app_repo: 'https://github.com/your/repo.git'
+
+  roles:
+    - role: setup_docker
+    - role: deploy_application
