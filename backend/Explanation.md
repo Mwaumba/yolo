@@ -63,3 +63,22 @@ Use latest for the most recent build or specific version numbers for tagged rele
 Versioning:
 
 Follow semantic versioning principles for clarity (e.g., v1.0.0, v1.1.0).
+
+# Explanation of Setup
+
+## Kubernetes Cluster
+
+We chose GKE Autopilot for its ease of management and automatic scaling. The cluster was set up in the `europe-west1` region to optimize for geographic proximity and latency.
+
+## Docker Images
+
+The Docker image `my-app` was built using the Dockerfile located in the project directory. It was tagged as `mwafuga/my-app:latest` and pushed to Docker Hub to ensure it can be easily accessed by the Kubernetes cluster.
+
+## Kubernetes Manifests
+
+The Kubernetes manifests include:
+- **Deployment**: Manages the deployment of the backend and frontend services.
+- **StatefulSet**: Used for the database to ensure persistent storage.
+- **Services**: Exposes the pods to the internet and facilitates internal communication.
+
+These manifests ensure that the application is deployed correctly and can scale as needed.
