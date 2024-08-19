@@ -3,7 +3,7 @@
   hosts: vms
   become: yes
   vars:
-    app_repo: 'https://github.com/your/repo.git'
+    app_repo: 'https://github.com/Mwaumba/yolo.git'
 
   roles:
     - role: setup_docker
