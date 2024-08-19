@@ -68,7 +68,7 @@ Follow semantic versioning principles for clarity (e.g., v1.0.0, v1.1.0).
 
 ## Kubernetes Cluster
 
-We chose GKE Autopilot for its ease of management and automatic scaling. The cluster was set up in the `europe-west1` region to optimize for geographic proximity and latency.
+I chose GKE Autopilot for its ease of management and automatic scaling. The cluster was set up in the `europe-west1` region to optimize for geographic proximity and latency.
 
 ## Docker Images
 
@@ -80,5 +80,5 @@ The Kubernetes manifests include:
 - **Deployment**: Manages the deployment of the backend and frontend services.
 - **StatefulSet**: Used for the database to ensure persistent storage.
 - **Services**: Exposes the pods to the internet and facilitates internal communication.
-
+- **PersistentVolumeClaims** are used to request storage for the database, compliant with Autopilot constraints.
 These manifests ensure that the application is deployed correctly and can scale as needed.
